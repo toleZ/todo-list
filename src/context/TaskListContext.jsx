@@ -10,6 +10,18 @@ const TaskListProvider = ({ children }) => {
   const [taskList, setTaskList] = useState([]);
 
   const addTask = (task) => {
+    if(task.replace(/ /g,'') === '' || task === null){
+      return(
+        toast({
+          title: "You can't add an empty task",
+          position:'bottom-right',
+          status: 'error',
+          duration: '2000',
+          isClosable: true
+        })
+      )
+    }
+
     taskList.includes(task)
       ? toast({
         title: 'This task is already on the list',
