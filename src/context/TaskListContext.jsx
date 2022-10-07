@@ -12,14 +12,12 @@ const TaskListProvider = ({ children }) => {
   const addTask = (task) => {
     taskList.includes(task)
       ? toast({
-          position: "bottom-right",
-          render: () => (
-            <Box bgColor="red" color="white" p={3}>
-              <WarningTwoIcon />
-              This task is already on the list
-            </Box>
-          ),
-        })
+        title: 'This task is already on the list',
+        position:'bottom-right',
+        status: 'error',
+        duration: '2000',
+        isClosable: true
+      })
       : setTaskList([...taskList, task]);
   };
 

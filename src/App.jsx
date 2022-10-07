@@ -8,7 +8,7 @@ function App() {
   return (
     <Container bg="gray.700" textColor="white" maxW={"full"} h={"100vh"} p="5">
       <Text fontSize="4xl" align="center" fontFamily={'Lobster'}>
-      · To Do list ·
+      · To Do List ·
       </Text>
       <TodoAddInput />
       <TodoList />
