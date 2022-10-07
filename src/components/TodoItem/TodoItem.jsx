@@ -10,7 +10,7 @@ const TodoItem = ({ task }) => {
   };
 
   return (
-    <ListItem p="2">
+    <ListItem p="2" _hover={{ background: "gray.600", borderRadius: 'base'}}>
       <Flex alignItems='center' position='relative'>
         <Checkbox px="1" value={task} onChange={handleChangeCkbx} />
         <Text as={checked ? "del" : ""}>{task}</Text>
